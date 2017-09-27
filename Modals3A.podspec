@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "Modals3A"
-s.version      = "0.1.0"
+s.version      = "0.2.0"
 s.summary      = "CocoaPod for 3A's (Tres Astronautas) custom alerts and modals."
 s.requires_arc = true
 
@@ -26,6 +26,7 @@ s.framework = "UIKit"
 s.dependency 'JModalController'
 
 s.source_files  = "Modals3A", "Modals3A/**/*.{swift}"
+s.resource_bundles = { 'Resources' => ['Modals3A/**/*.{xib,xcassets,storyboard}'] }
 
 # s.resources = "Modals3A/*.png"
 end

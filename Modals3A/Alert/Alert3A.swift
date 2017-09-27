@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Alert3A: UIViewController {
+public class Alert3A: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
@@ -84,7 +84,7 @@ class Alert3A: UIViewController {
         alert.didMove(toParentViewController: parent)
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Modals3AConfig.backgroundColor
         self.bodyLabel.textColor = Modals3AConfig.textColor
@@ -100,7 +100,7 @@ class Alert3A: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         Alert3A.alertOnView = true
         self.titleLabel.text = self.titleString
         self.bodyLabel.text = self.bodyString
@@ -115,11 +115,11 @@ class Alert3A: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         Alert3A.alertOnView = false
     }
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         self.confirmationB.addNormalShadow()
         self.confirmationB.roundCorners(radius: 40)
         if self.cancelTitle != nil {
@@ -128,7 +128,7 @@ class Alert3A: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
