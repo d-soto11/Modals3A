@@ -33,7 +33,7 @@ public class Alert3A: UIViewController {
             return
         }
         
-        let alert = Alert3A(nibName: "Alert3A", bundle: nil)
+        let alert = Alert3A(nibName: "Alert3A", bundle: Bundle(for: Alert3A.self))
         
         let blackView = UIView()
         blackView.tag = 95

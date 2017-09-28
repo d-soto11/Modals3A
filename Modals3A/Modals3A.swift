@@ -12,7 +12,7 @@ import JModalController
 public class Modals3A: NSObject {
     
     public class func optionPickerWith(title: String, options: [String], onViewController: (UIViewController & OptionPickerDelegate), allowMultiple: Bool = false, tag: Int = 0, selected: [Int] = []) -> Void {
-        let storyboard = UIStoryboard(name: "OptionPicker3A", bundle: nil)
+        let storyboard = UIStoryboard(name: "OptionPicker3A", bundle: Bundle(for: self))
         let option_picker = storyboard.instantiateViewController(withIdentifier: "OptionPicker") as? OptionPicker3A
         option_picker?.label = title
         option_picker?.delegate = onViewController
@@ -27,7 +27,7 @@ public class Modals3A: NSObject {
     
     public class func datePickerWith(title: String, date: String? = nil, format:String = "dd-MM-yyyy", type: UIDatePickerMode = .date, minDate:DatePicker3A.DateLimit = .none, maxDate:DatePicker3A.DateLimit = .none, delegate: DatePickerDelegate, jm_delegate: JModalDelegate, tag: Int = 0, onViewController: UIViewController) {
         
-        let date_picker = DatePicker3A.init(nibName: "DatePicker3A", bundle: nil)
+        let date_picker = DatePicker3A.init(nibName: "DatePicker3A", bundle: Bundle(for: self))
         
         date_picker.label = title
         date_picker.date = date
