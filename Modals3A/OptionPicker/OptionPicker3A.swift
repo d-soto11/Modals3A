@@ -30,7 +30,7 @@ class OptionPicker3A: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.text.text = label
         self.text.textColor = Modals3AConfig.textColor
-        self.text.font = UIFont(name: Modals3AConfig.fontFamily, size: 12)
+        self.text.font = UIFont(name: Modals3AConfig.fontFamily, size: Modals3AConfig.titleFontSize)
         self.view.backgroundColor = Modals3AConfig.backgroundColor
         self.doneB.backgroundColor = Modals3AConfig.foregroundColor
         self.doneB.setTitleColor(Modals3AConfig.confirmTextColor, for: .normal)

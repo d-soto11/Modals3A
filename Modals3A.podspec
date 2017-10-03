@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "Modals3A"
-s.version      = "0.3.0"
+s.version      = "0.4.0"
 s.summary      = "CocoaPod for 3A's (Tres Astronautas) custom alerts and modals."
 s.requires_arc = true
 

@@ -15,4 +15,6 @@ public class Modals3AConfig: NSObject {
     public static var confirmTextColor: UIColor = .white
     public static var cancelTextColor: UIColor = .gray
     public static var fontFamily: String = UIFont.systemFont(ofSize: 12).familyName
+    public static var titleFontSize: CGFloat = 25
+    public static var bodyFontSize: CGFloat = 20
 }

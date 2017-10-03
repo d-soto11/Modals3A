@@ -40,6 +40,7 @@ public class DatePicker3A: UIViewController {
         self.view.backgroundColor = Modals3AConfig.backgroundColor
         self.text.text = label
         self.text.textColor = Modals3AConfig.textColor
+        self.text.font = UIFont(name: Modals3AConfig.fontFamily, size: Modals3AConfig.titleFontSize)
         self.acceptB.backgroundColor = Modals3AConfig.foregroundColor
         self.acceptB.setTitleColor(Modals3AConfig.confirmTextColor, for: .normal)
         

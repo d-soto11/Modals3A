@@ -33,7 +33,7 @@ public class Alert3A: UIViewController {
             return
         }
         
-        let alert = Alert3A(nibName: "Alert3A", bundle: Bundle(for: Alert3A.self))
+        let alert = Alert3A(nibName: "Alert3A", bundle: Modals3A.bundle)
         
         let blackView = UIView()
         blackView.tag = 95
@@ -88,9 +88,9 @@ public class Alert3A: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = Modals3AConfig.backgroundColor
         self.bodyLabel.textColor = Modals3AConfig.textColor
-        self.bodyLabel.font = UIFont(name: Modals3AConfig.fontFamily, size: 10)
+        self.bodyLabel.font = UIFont(name: Modals3AConfig.fontFamily, size: Modals3AConfig.bodyFontSize)
         self.titleLabel.textColor = Modals3AConfig.textColor
-        self.titleLabel.font = UIFont(name: Modals3AConfig.fontFamily, size: 12)
+        self.titleLabel.font = UIFont(name: Modals3AConfig.fontFamily, size: Modals3AConfig.titleFontSize)
         self.confirmationB.backgroundColor = Modals3AConfig.foregroundColor
         self.confirmationB.setTitleColor(Modals3AConfig.confirmTextColor, for: .normal)
         self.cancelB.setTitleColor(Modals3AConfig.cancelTextColor, for: .normal)
@@ -121,7 +121,7 @@ public class Alert3A: UIViewController {
     
     override public func viewDidLayoutSubviews() {
         self.confirmationB.addNormalShadow()
-        self.confirmationB.roundCorners(radius: 40)
+        self.confirmationB.roundCorners(radius: 20)
         if self.cancelTitle != nil {
             self.cancelB.roundCorners(radius: 15)
             self.cancelB.bordered(color: Modals3AConfig.cancelTextColor)

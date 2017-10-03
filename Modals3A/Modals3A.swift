@@ -11,34 +11,36 @@ import JModalController
 
 public class Modals3A: NSObject {
     
+    internal static let bundle = Bundle(url: Bundle(for: Modals3A.classForCoder()).url(forResource: "Modals3A", withExtension: "bundle")!)
+    
     public class func optionPickerWith(title: String, options: [String], onViewController: (UIViewController & OptionPickerDelegate), allowMultiple: Bool = false, tag: Int = 0, selected: [Int] = []) -> Void {
-        let storyboard = UIStoryboard(name: "OptionPicker3A", bundle: Bundle(for: self))
-        let option_picker = storyboard.instantiateViewController(withIdentifier: "OptionPicker") as? OptionPicker3A
-        option_picker?.label = title
-        option_picker?.delegate = onViewController
-        option_picker?.jm_delegate = onViewController as JModalDelegate
-        option_picker?.options = options
-        option_picker?.allowMultiple = allowMultiple
-        option_picker?.tag = tag
-        option_picker?.indexes = selected
+        let storyboard = UIStoryboard(name: "OptionPicker3A", bundle: Modals3A.bundle)
+        let picker = storyboard.instantiateViewController(withIdentifier: "Picker") as! OptionPicker3A
+        picker.label = title
+        picker.delegate = onViewController
+        picker.jm_delegate = onViewController as JModalDelegate
+        picker.options = options
+        picker.allowMultiple = allowMultiple
+        picker.tag = tag
+        picker.indexes = selected
         let config = JModalConfig(transitionDirection: .bottom, animationDuration: 0.2, backgroundTransform: false, tapOverlayDismiss: true)
-        onViewController.presentModal(onViewController, modalViewController: option_picker!, config: config, completion: nil)
+        onViewController.presentModal(onViewController, modalViewController: picker, config: config, completion: nil)
     }
     
-    public class func datePickerWith(title: String, date: String? = nil, format:String = "dd-MM-yyyy", type: UIDatePickerMode = .date, minDate:DatePicker3A.DateLimit = .none, maxDate:DatePicker3A.DateLimit = .none, delegate: DatePickerDelegate, jm_delegate: JModalDelegate, tag: Int = 0, onViewController: UIViewController) {
+    public class func datePickerWith(title: String, date: String? = nil, format:String = "yyyy-MM-dd", type: UIDatePickerMode = .date, from:DatePicker3A.DateLimit = .none, to:DatePicker3A.DateLimit = .none, tag: Int = 0, onViewController: (UIViewController & DatePickerDelegate)) {
         
-        let date_picker = DatePicker3A.init(nibName: "DatePicker3A", bundle: Bundle(for: self))
+        let date_picker = DatePicker3A.init(nibName: "DatePicker3A", bundle: Modals3A.bundle)
         
         date_picker.label = title
         date_picker.date = date
         date_picker.format = format
         date_picker.type = type
-        date_picker.delegate = delegate
-        date_picker.jm_delegate = jm_delegate
+        date_picker.delegate = onViewController
+        date_picker.jm_delegate = onViewController as JModalDelegate
         date_picker.tag = tag
         
-        date_picker.minDate = minDate
-        date_picker.maxDate = maxDate
+        date_picker.minDate = from
+        date_picker.maxDate = to
         
         let config = JModalConfig(transitionDirection: .bottom, animationDuration: 0.2, backgroundTransform: false, tapOverlayDismiss: true)
         onViewController.presentModal(onViewController, modalViewController: date_picker, config: config) {
