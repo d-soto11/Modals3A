@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Alert3A" customModule="Modals3A" customModuleProvider="target">
+            <connections>
+                <outlet property="bodyLabel" destination="slS-XY-vfg" id="5hv-Wp-DjU"/>
+                <outlet property="cancelB" destination="mN1-ER-Qf9" id="65c-b4-q1f"/>
+                <outlet property="cancelHeigth" destination="f2x-lp-yiA" id="uJz-GE-q73"/>
+                <outlet property="confirmationB" destination="4Dz-ca-LNi" id="6ta-sy-fyE"/>
+                <outlet property="titleLabel" destination="6P0-WV-tpV" id="kil-Fr-SSs"/>
+                <outlet property="view" destination="c5F-LI-qDu" id="Uvv-Sx-TEK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="c5F-LI-qDu">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dz-ca-LNi">
+                    <rect key="frame" x="0.0" y="135" width="354" height="40"/>
+                    <color key="backgroundColor" red="0.72941176470000002" green="0.81568627449999997" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gOr-4n-wmf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="confirm:" destination="-1" eventType="touchUpInside" id="nHH-KE-R6J"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-WV-tpV">
+                    <rect key="frame" x="20" y="20" width="314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="VrL-51-A3e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                    <color key="textColor" red="0.72941176470000002" green="0.81568627449999997" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="slS-XY-vfg">
+                    <rect key="frame" x="25" y="80" width="304" height="25"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN1-ER-Qf9">
+                    <rect key="frame" x="53" y="190" width="248" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="f2x-lp-yiA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="ZA7-YJ-9ay"/>
+                    </connections>
+                </button>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-i4-g9d">
+                    <rect key="frame" x="0.0" y="124" width="354" height="1"/>
+                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Xok-eq-VtF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="trailing" secondItem="rCd-i4-g9d" secondAttribute="trailing" id="3lS-pR-x7Y"/>
+                <constraint firstItem="6P0-WV-tpV" firstAttribute="leading" secondItem="S6e-K3-Ua2" secondAttribute="leading" constant="20" id="4e0-S1-ZvO"/>
+                <constraint firstItem="slS-XY-vfg" firstAttribute="leading" secondItem="c5F-LI-qDu" secondAttribute="leading" constant="25" id="5Y9-Pz-P18"/>
+                <constraint firstItem="6P0-WV-tpV" firstAttribute="top" secondItem="S6e-K3-Ua2" secondAttribute="top" constant="20" id="HD1-H0-xJl"/>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="leading" secondItem="S6e-K3-Ua2" secondAttribute="leading" id="L9S-dI-43c"/>
+                <constraint firstItem="S6e-K3-Ua2" firstAttribute="bottom" secondItem="mN1-ER-Qf9" secondAttribute="bottom" constant="10" id="OMi-A3-CtQ"/>
+                <constraint firstItem="slS-XY-vfg" firstAttribute="top" secondItem="6P0-WV-tpV" secondAttribute="bottom" constant="20" id="TXl-KM-pxi"/>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="top" secondItem="slS-XY-vfg" secondAttribute="bottom" constant="30" id="X8w-jO-XVk"/>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="centerX" secondItem="c5F-LI-qDu" secondAttribute="centerX" id="ayf-6I-CJJ"/>
+                <constraint firstItem="mN1-ER-Qf9" firstAttribute="width" secondItem="4Dz-ca-LNi" secondAttribute="width" multiplier="0.7" id="cvT-Uu-3ko"/>
+                <constraint firstItem="mN1-ER-Qf9" firstAttribute="top" secondItem="4Dz-ca-LNi" secondAttribute="bottom" constant="15" id="dKR-Qy-E0a"/>
+                <constraint firstItem="mN1-ER-Qf9" firstAttribute="centerX" secondItem="c5F-LI-qDu" secondAttribute="centerX" id="kIk-f4-rSC"/>
+                <constraint firstItem="slS-XY-vfg" firstAttribute="centerX" secondItem="c5F-LI-qDu" secondAttribute="centerX" id="lJr-y1-bFf"/>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="leading" secondItem="rCd-i4-g9d" secondAttribute="leading" id="nke-gN-E4S"/>
+                <constraint firstItem="4Dz-ca-LNi" firstAttribute="top" secondItem="rCd-i4-g9d" secondAttribute="bottom" constant="10" id="sFX-vc-Efc"/>
+                <constraint firstItem="6P0-WV-tpV" firstAttribute="centerX" secondItem="c5F-LI-qDu" secondAttribute="centerX" id="wfD-hW-eFs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="S6e-K3-Ua2"/>
+            <point key="canvasLocation" x="41" y="25"/>
+        </view>
+    </objects>
+</document>

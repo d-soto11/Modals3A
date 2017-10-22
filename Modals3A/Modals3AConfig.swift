@@ -17,4 +17,6 @@ public class Modals3AConfig: NSObject {
     public static var fontFamily: String = UIFont.systemFont(ofSize: 12).familyName
     public static var titleFontSize: CGFloat = 25
     public static var bodyFontSize: CGFloat = 20
+    public static var roundedCorners: Bool = true
+    public static var flatMode: Bool = false
 }

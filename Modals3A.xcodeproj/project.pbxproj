@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A8A35E1F8BE19400E6FF3C /* Notification3A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A35C1F8BE19400E6FF3C /* Notification3A.swift */; };
+		43A8A35F1F8BE19400E6FF3C /* Notification3A.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A8A35D1F8BE19400E6FF3C /* Notification3A.xib */; };
+		43D4A7731F8C6A1D00BCAFDF /* FlatAlert3A.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D4A7721F8C6A1D00BCAFDF /* FlatAlert3A.xib */; };
 		43E04C461F7C1119000C4C20 /* Modals3A.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E04C441F7C1119000C4C20 /* Modals3A.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43E04C511F7C12D2000C4C20 /* Alert3A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E04C4F1F7C12D2000C4C20 /* Alert3A.swift */; };
 		43E04C521F7C12D2000C4C20 /* Alert3A.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E04C501F7C12D2000C4C20 /* Alert3A.xib */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43A8A35C1F8BE19400E6FF3C /* Notification3A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification3A.swift; sourceTree = "<group>"; };
+		43A8A35D1F8BE19400E6FF3C /* Notification3A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notification3A.xib; sourceTree = "<group>"; };
+		43D4A7721F8C6A1D00BCAFDF /* FlatAlert3A.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlatAlert3A.xib; sourceTree = "<group>"; };
 		43E04C411F7C1119000C4C20 /* Modals3A.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Modals3A.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E04C441F7C1119000C4C20 /* Modals3A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Modals3A.h; sourceTree = "<group>"; };
 		43E04C451F7C1119000C4C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43A8A3591F8BE14C00E6FF3C /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				43A8A35C1F8BE19400E6FF3C /* Notification3A.swift */,
+				43A8A35D1F8BE19400E6FF3C /* Notification3A.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		43E04C371F7C1119000C4C20 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +90,7 @@
 				43E04C4E1F7C1266000C4C20 /* OptionPicker */,
 				43E04C4D1F7C125E000C4C20 /* DatePicker */,
 				43E04C4C1F7C1253000C4C20 /* Alert */,
+				43A8A3591F8BE14C00E6FF3C /* Notification */,
 				43E04C441F7C1119000C4C20 /* Modals3A.h */,
 				43E04C451F7C1119000C4C20 /* Info.plist */,
 				43E04C5E1F7C18FC000C4C20 /* Modals3AConfig.swift */,
@@ -88,6 +104,7 @@
 			children = (
 				43E04C4F1F7C12D2000C4C20 /* Alert3A.swift */,
 				43E04C501F7C12D2000C4C20 /* Alert3A.xib */,
+				43D4A7721F8C6A1D00BCAFDF /* FlatAlert3A.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -208,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E04C521F7C12D2000C4C20 /* Alert3A.xib in Resources */,
+				43D4A7731F8C6A1D00BCAFDF /* FlatAlert3A.xib in Resources */,
 				43E04C691F7C1D9D000C4C20 /* DatePicker3A.xib in Resources */,
+				43A8A35F1F8BE19400E6FF3C /* Notification3A.xib in Resources */,
 				43E04C5D1F7C17B3000C4C20 /* OptionPicker3A.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +280,7 @@
 				43E04C5F1F7C18FC000C4C20 /* Modals3AConfig.swift in Sources */,
 				43E04C611F7C1CDF000C4C20 /* Modals3A.swift in Sources */,
 				43E04C5A1F7C178A000C4C20 /* OptionPicker3A.swift in Sources */,
+				43A8A35E1F8BE19400E6FF3C /* Notification3A.swift in Sources */,
 				43E04C551F7C14D9000C4C20 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
